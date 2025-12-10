@@ -1,0 +1,39 @@
+{
+  "cli": {
+    "version": ">= 5.2.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "API_BASE_URL": "$EAS_SECRET_API_BASE_URL"
+      }
+    },
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": false
+      },
+      "env": {
+        "API_BASE_URL": "$EAS_SECRET_API_BASE_URL"
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "ios": {
+        "simulator": false
+      },
+      "env": {
+        "API_BASE_URL": "$EAS_SECRET_API_BASE_URL"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
